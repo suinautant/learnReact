@@ -1,11 +1,11 @@
 import React from 'react';
+import TodaysPlan from './03/TodaysPlan';
 
 class App extends React.Component {
   render() {
     return (
-      <div>
-        <img src="http://www.easypub.co.kr/images/logo_footer.png" alt="" />
-        <div>안녕하세요</div>
+      <div className="body">
+        <TodaysPlan />
       </div>
     );
   }
