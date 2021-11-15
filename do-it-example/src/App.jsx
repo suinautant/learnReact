@@ -5,7 +5,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <ChildComponent2 objValue={{ age: '20살' }} />
+        <ChildComponent2 objValue={{ age: 20 }} requiredStringValue="문자" />
       </div>
     );
   }
