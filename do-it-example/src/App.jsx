@@ -1,5 +1,5 @@
 import React from 'react';
-import Example from './03/ForceUpdateExample';
+import Example from './03/Counter';
 
 class App extends React.Component {
   render() {
