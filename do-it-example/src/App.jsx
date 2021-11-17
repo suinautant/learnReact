@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Counter from './03/Counter3';
+import Example from './03/Input';
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Counter />
+        <Example type="text" name="aaa" value="value" errorMessage="error msg" label="input box" />
       </div>
     );
   }
