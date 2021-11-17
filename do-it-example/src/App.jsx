@@ -1,11 +1,11 @@
 import React from 'react';
-import StateExample from './03/StateExample';
+import Example from './03/ForceUpdateExample';
 
 class App extends React.Component {
   render() {
     return (
       <div>
-        <StateExample />
+        <Example />
       </div>
     );
   }
