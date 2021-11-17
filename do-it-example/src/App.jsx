@@ -1,11 +1,11 @@
-import React from 'react';
-import Example from './03/TodoList';
+import React, { Component } from 'react';
+import Counter from './03/Counter3';
 
-class App extends React.Component {
+class App extends Component {
   render() {
     return (
       <div>
-        <Example />
+        <Counter />
       </div>
     );
   }
