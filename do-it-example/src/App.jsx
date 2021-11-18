@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
-import Example from './03/Input';
+import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Example type="text" name="aaa" value="value" errorMessage="error msg" label="input box" />
+        <nav>
+          <div className="nav-wrapper">
+            <div>두잇! 리액트 시작하기</div>
+          </div>
+        </nav>
+        <h1>머티리얼 CSS</h1>
       </div>
     );
   }
