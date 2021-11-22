@@ -17,7 +17,7 @@ describe('<Checkbox>', () => {
         테스트
       </CheckBox>,
     )
-      .div()
+      .dive()
       .find('span')
       .html();
     expect(errorHtml).toContain(errorMessage);
