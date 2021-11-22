@@ -4,13 +4,9 @@ import { shallow } from 'enzyme';
 import Input from '../../03/Input';
 
 describe('<Input>', () => {
-  it('renders without crashing', () => {
-    expect(() => {
-      shallow(<Input name="test_name" />);
-    }).not.toThrow();
-  });
+  // ...(renders without crashing에 관한 예제)...
   it('has one element', () => {
-    const wrapper = shallow(<Input name="test_name" />);
+    const wrapper = shallow(<Input />);
     expect(wrapper.length).toEqual(1);
     expect(wrapper).toHaveLength(1);
   });
