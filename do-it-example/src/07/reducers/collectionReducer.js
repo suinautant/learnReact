@@ -1,4 +1,4 @@
-import { SET_COLLECTION, SET_AGE } from '../actions/collectionActions01';
+import { SET_COLLECTION, SET_AGE } from '../actions/collectionActions';
 
 const initState = {
   idx: [],
