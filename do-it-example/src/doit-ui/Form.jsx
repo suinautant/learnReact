@@ -33,13 +33,15 @@ class FormProvider extends React.PureComponent {
   }
 
   onChange(name, updatedValue) {
-    this.validate(this.state.values);
-    this.setState(({ values }) => ({
-      values: {
-        ...values,
-        [name]: updatedValue,
-      },
-    }));
+    this.setState(
+      ({ values }) => ({
+        values: {
+          ...values,
+          [name]: updatedValue,
+        },
+      }),
+      () => this.validate(this.state.values),
+    );
   }
 
   reset() {
@@ -59,7 +61,6 @@ class FormProvider extends React.PureComponent {
 
   render() {
     const { values, errors } = this.state;
-
     return (
       <Provider
         value={{
@@ -80,7 +81,7 @@ FormProvider.propTypes = {
 };
 
 FormProvider.defaultProps = {
-  initValue: {},
+  initValues: {},
   validate: () => ({}),
 };
 

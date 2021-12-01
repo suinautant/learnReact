@@ -32,7 +32,8 @@ TableCell.propTypes = {
 };
 
 TableCell.defaultProps = {
-  baseline: WebGLTexture,
+  // baseline: WebGLTexture,
+  baseline: true,
   isHeader: false,
 };
 

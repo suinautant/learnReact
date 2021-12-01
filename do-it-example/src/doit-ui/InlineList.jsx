@@ -28,7 +28,7 @@ class InlineList extends PureComponent {
 InlineList.propTypes = {
   ...withStylesPropTypes,
   align: PropTypes.oneOf(['left', 'center', 'right']),
-  verticalAlign: PropTypes.oneOf(['top', 'middle', 'bottoom']),
+  verticalAlign: PropTypes.oneOf(['top', 'middle', 'bottom']),
   spacingBetween: PropTypes.number,
   children: PropTypes.node,
 };
