@@ -5,13 +5,19 @@ import Button from '../../../doit-ui/Button';
 import Text from '../../../doit-ui/Text';
 import Input from '../../../doit-ui/Input';
 import Form from '../../../doit-ui/Form';
-
 import Select, { Option } from '../../../doit-ui/Select';
+import Api from './../../Api';
 
 class TransactionSearchFilter extends PureComponent {
   render() {
     return (
-      <Form onSubmit={(values) => console.log(values)}>
+      // <Form onSubmit={(values) => console.log(values)}>
+      <Form
+        onSubmit={(values) => {
+          Api.get('/transactions', { params: values });
+          console.log(values);
+        }}
+      >
         <Form.Consumer>
           {({ onChange, values }) => (
             <InlineList spacingBetween={2} verticalAlign="bottom">
@@ -22,6 +28,7 @@ class TransactionSearchFilter extends PureComponent {
                 <Option label="선택해주세요" value="" />
                 <Option label="비트코인(BTX)" value="BTX" />
                 <Option label="이더리움(ETH)" value="ETH" />
+                <Option label="리플(RXP)" value="RXP" />
                 <Option label="두잇코인(DOIT)" value="DOIT" />
               </Select>
               <Input
