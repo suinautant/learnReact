@@ -1,20 +1,24 @@
 import React, { PureComponent } from 'react';
-import Modal from '../Modal';
+import Modal from '../Modal'; // 혹은 import Modal from './index';
+
 import { Provider } from './context';
 
 export default function createModalProvider(ContentMap = {}) {
   return class ModalProvider extends PureComponent {
     constructor(props) {
       super(props);
-      this.state = { chowModal: false };
+
+      this.state = { showModal: false };
       this.handleClose = this.handleClose.bind(this);
       this.handleOpen = this.handleOpen.bind(this);
     }
+
     handleOpen(contentId, modalProps) {
       this.contentId = contentId;
       this.modalProps = modalProps;
       this.setState({ showModal: true });
     }
+
     handleClose() {
       this.setState({ showModal: false });
     }
@@ -37,7 +41,6 @@ export default function createModalProvider(ContentMap = {}) {
               <ModalContent {...this.modalProps} />
             </Modal>
           )}
-          ;
         </Provider>
       );
     }
